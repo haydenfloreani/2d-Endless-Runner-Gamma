@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,12 +33,12 @@ public class Player : MonoBehaviour
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
             transform.position = targetPos;
         }
-             else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
         {
-              targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
-             transform.position = targetPos;
-           }
-
+            targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
+            transform.position = targetPos;
         }
+
     }
+}
 

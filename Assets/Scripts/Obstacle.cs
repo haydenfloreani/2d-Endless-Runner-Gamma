@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    public int damage = 1;
-    public float speed;
-   
 
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    void OnTriggerEnter2d(Collider2D other)
+    public float speed;
+
+
+
+    private void OnTriggerEnter2d(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        other.GetComponent<Player>().health -= damage;
-        Debug.Log(other.GetComponent<Player>().health);
-        Destroy(gameObject);
+            Destroy(gameObject);
+        Debug.Log("hit detected");
     }
 
     // Update is called once per frame
