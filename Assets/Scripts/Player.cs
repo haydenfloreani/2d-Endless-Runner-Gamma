@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
 
+
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)

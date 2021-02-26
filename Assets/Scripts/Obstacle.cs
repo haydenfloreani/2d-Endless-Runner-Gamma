@@ -9,9 +9,9 @@ public class Obstacle : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2d(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == ("Player"))
             Destroy(gameObject);
         Debug.Log("hit detected");
     }
