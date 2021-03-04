@@ -14,21 +14,19 @@ public class Player : MonoBehaviour
     public float maxHeight;
     public float minHeight;
 
-    public int health = 3;
+   // public int health = 3;
 
-    // Start is called before the first frame update
-    public void Start()
-    {
 
-    }
 
     // Update is called once per frame
     public void Update()
     {
 
-
+        // suppose to make player move smoother
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
+
+        // move player up and down position
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
