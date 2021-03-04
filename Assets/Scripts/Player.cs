@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,13 +15,20 @@ public class Player : MonoBehaviour
     public float maxHeight;
     public float minHeight;
 
-   // public int health = 3;
+   public int health = 3; 
+    // if we decide to use health
 
 
 
     // Update is called once per frame
-    public void Update()
+    private void Update()
     {
+        if (health <=0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        }
+
 
         // suppose to make player move smoother
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
