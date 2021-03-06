@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
     public Vector2 targetPos;
     public float Yincrement;
     public float speed;
-
+    public float fallincrement;
 
 
     public float maxHeight;
     public float minHeight;
-
+    public float waterlevel;
    public int health = 3; 
     // if we decide to use health
 
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
 
         // move player up and down position
-        if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight && transform.position.y < waterlevel)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
             transform.position = targetPos;
@@ -46,6 +46,13 @@ public class Player : MonoBehaviour
             transform.position = targetPos;
         }
 
+        if (transform.position.y >= waterlevel)
+        {
+            targetPos = new Vector2(transform.position.x, transform.position.y - fallincrement);
+            transform.position = targetPos;
+    
+        }
     }
+
 }
 
