@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
+    public GameObject OxygenDisplay;
+    public GameObject HealthDisplay;
     public Vector2 targetPos;
     public float Yincrement;
     public float speed;
     public float fallincrement;
 
-
+    public float oxygenLose;
     public float maxHeight;
     public float minHeight;
     public float waterlevel;
-   public int health = 3; 
+   public int health = 3;
+    public float Oxygen = 100;
     // if we decide to use health
 
 
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
         if (health <=0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -40,7 +44,7 @@ public class Player : MonoBehaviour
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
             transform.position = targetPos;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight && transform.position.y < waterlevel)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
             transform.position = targetPos;
@@ -52,6 +56,27 @@ public class Player : MonoBehaviour
             transform.position = targetPos;
     
         }
+        {
+            if (transform.position.y > waterlevel)
+            {
+                Oxygen = 100;
+            }
+            else if (transform.position.y < waterlevel)
+            {
+                Oxygen = Oxygen - oxygenLose;
+            }
+            if (Oxygen <= 0 )
+            {
+                Oxygen = 0;
+                health -= 1;
+            }
+
+
+        }
+
+        OxygenDisplay.GetComponent<Text>().text = "Oxygen:" + Oxygen + "/100";
+        HealthDisplay.GetComponent<Text>().text = "Health:" + health + "/3";
+
     }
 
 }
