@@ -8,14 +8,13 @@ public class Player : MonoBehaviour
 
     public Vector2 targetPos;
     public float Yincrement;
-    public float speed;
     public float fallincrement;
 
 
     public float maxHeight;
     public float minHeight;
     public float waterlevel;
-   public int health = 3; 
+    public int health = 3; 
     // if we decide to use health
 
 
@@ -23,15 +22,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //restart upon death 
         if (health <=0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         }
 
-
-        // suppose to make player move smoother
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
 
         // move player up and down position
