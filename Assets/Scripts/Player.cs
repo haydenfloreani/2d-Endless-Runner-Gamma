@@ -9,7 +9,11 @@ public class Player : MonoBehaviour
     public GameObject OxygenDisplay;
     public GameObject HealthDisplay;
     public Vector2 targetPos;
+
     public float Yincrement;
+    public float Xincrement;
+    public float back;
+    public float front;
     public float fallincrement;
 
     public float oxygenLose;
@@ -44,7 +48,28 @@ public class Player : MonoBehaviour
         {
             targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
             transform.position = targetPos;
+         }
+
+        // left and right movement  please help why dose this not work
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > back)
+            {
+                targetPos = new Vector2(transform.position.y, (transform.position.x - Xincrement));
+                transform.position = targetPos;
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < front)
+            {
+                targetPos = new Vector2(transform.position.y, (transform.position.x + Xincrement));
+                transform.position = targetPos;
+            }
         }
+
+
+
+
+
+
+
         // makes player fall when above water level back into water
         if (transform.position.y >= waterlevel)
         {
