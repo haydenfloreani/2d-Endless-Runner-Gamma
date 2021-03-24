@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     public GameObject HealthDisplay;
     public Vector2 targetPos;
     public float Yincrement;
-    public float speed;
     public float fallincrement;
 
     public float oxygenLose;
@@ -33,9 +32,6 @@ public class Player : MonoBehaviour
 
         }
 
-
-        // suppose to make player move smoother
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
 
         // move player up and down position
