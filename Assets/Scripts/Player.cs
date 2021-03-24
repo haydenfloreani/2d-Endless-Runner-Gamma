@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
+        // resets game when health falls to zero
         if (health <=0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -45,13 +45,14 @@ public class Player : MonoBehaviour
             targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
             transform.position = targetPos;
         }
-
+        // makes player fall when above water level back into water
         if (transform.position.y >= waterlevel)
         {
             targetPos = new Vector2(transform.position.x, transform.position.y - fallincrement);
             transform.position = targetPos;
     
         }
+        // oxygen feature lose when below water gain full when go above water
         {
             if (transform.position.y > waterlevel)
             {
@@ -69,7 +70,7 @@ public class Player : MonoBehaviour
 
 
         }
-
+        // text display for oxygen and health
         OxygenDisplay.GetComponent<Text>().text = "Oxygen:" + Oxygen + "/100";
         HealthDisplay.GetComponent<Text>().text = "Health:" + health + "/3";
 
