@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2822,8 +2822,11 @@ MonoBehaviour:
   HealthDisplay: {fileID: 672978779}
   targetPos: {x: -6.01, y: 0.76}
   Yincrement: 2
+  Xincrement: 2
+  back: -6.01
+  front: 10.01
   fallincrement: 0.005
-  oxygenLose: 0.005
+  oxygenLose: 0.05
   maxHeight: 2.26
   minHeight: -2.85
   waterlevel: 0.76
