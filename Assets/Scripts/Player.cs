@@ -51,18 +51,18 @@ public class Player : MonoBehaviour
          }
 
         // left and right movement  please help why dose this not work
-        {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > back)
-            {
-                targetPos = new Vector2(transform.position.y, (transform.position.x - Xincrement));
-                transform.position = targetPos;
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < front)
-            {
-                targetPos = new Vector2(transform.position.y, (transform.position.x + Xincrement));
-                transform.position = targetPos;
-            }
-        }
+        //{
+        //    if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > back)
+        //    {
+        //        targetPos = new Vector2(transform.position.y, (transform.position.x - Xincrement));
+        //        transform.position = targetPos;
+        //    }
+        //    else if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < front)
+        //    {
+        //        targetPos = new Vector2(transform.position.y, (transform.position.x + Xincrement));
+        //        transform.position = targetPos;
+        //    }
+        //}
 
 
 
