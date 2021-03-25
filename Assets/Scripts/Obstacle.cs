@@ -36,7 +36,7 @@ public class Obstacle : MonoBehaviour
         //destroys gameobject once it moves off screen
         if (transform.position.x <= endX)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);  
         }
 
         //if (transform.position.x > screenBounds.x * 2)

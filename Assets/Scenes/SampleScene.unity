@@ -354,8 +354,8 @@ GameObject:
   - component: {fileID: 550682596}
   - component: {fileID: 550682595}
   - component: {fileID: 550682594}
-  - component: {fileID: 550682593}
   - component: {fileID: 550682592}
+  - component: {fileID: 550682593}
   m_Layer: 0
   m_Name: Obstacle Buoys
   m_TagString: Obstacle
@@ -403,7 +403,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4866182238925101983, guid: e061b1b2253107740a1d75566df75ff5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 149a1015d0482714691b01e76e1e09e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -414,8 +414,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &550682593
-CircleCollider2D:
+--- !u!61 &550682593
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -424,12 +424,22 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13472986}
+  m_Offset: {x: 0.010652147, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.64}
+    newSize: {x: 1.1999999, y: 1.1999999}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.47897092
+  m_Size: {x: 0.2243536, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!114 &550682594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   damage: 1
-  endX: 0
+  endX: -15
 --- !u!50 &550682595
 Rigidbody2D:
   serializedVersion: 4
@@ -474,8 +484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550682591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.53, y: 5.5, z: -1}
-  m_LocalScale: {x: 1.1132405, y: 1.0000336, z: 1}
+  m_LocalPosition: {x: 8.96, y: 2.33, z: -1}
+  m_LocalScale: {x: 2.8559294, y: 1.4098325, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -1060,8 +1070,8 @@ GameObject:
   - component: {fileID: 1370041648}
   - component: {fileID: 1370041647}
   - component: {fileID: 1370041646}
-  - component: {fileID: 1370041645}
   - component: {fileID: 1370041644}
+  - component: {fileID: 1370041645}
   m_Layer: 0
   m_Name: Obstacle Seagull
   m_TagString: Obstacle
@@ -1109,7 +1119,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4866182238925101983, guid: e061b1b2253107740a1d75566df75ff5, type: 3}
+  m_Sprite: {fileID: 3848786266109995209, guid: 28ff8034b251aa54f9666df780c8d978, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1130,12 +1140,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13472986}
+  m_Offset: {x: 0, y: -0.061051957}
   serializedVersion: 2
-  m_Radius: 0.47897092
+  m_Radius: 0.17921945
 --- !u!114 &1370041646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,8 +1190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370041643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.1, y: 5.76, z: -1}
-  m_LocalScale: {x: 1.1132405, y: 1.0000336, z: 1}
+  m_LocalPosition: {x: 12.09, y: 3.09, z: -1}
+  m_LocalScale: {x: 2.3707569, y: 2.1296716, z: 2.1296}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
