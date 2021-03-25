@@ -14,9 +14,9 @@ public class Obstacle : MonoBehaviour
     {
         if (other.tag == ("Player"))
             Destroy(gameObject);
-      
+
         //player takes damage
-      //  other.GetComponent<Player>().health -= damage;
+        other.GetComponent<Player>().health -= damage;
     }
 
     private void Start()
