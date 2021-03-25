@@ -12,11 +12,6 @@ public class Spawner : MonoBehaviour
     public float decreaseTime;
     public float minTime = 0.65f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,9 +20,11 @@ public class Spawner : MonoBehaviour
         if (timeBtwSpawn <= 0)
         {
             //random time for spawn
-            int rand = Random.Range(0, obstaclePatterns.Length);
+            int rand = Random.Range(0, obstaclePatterns.Length); // 
             Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
+
+
             if (startTimeBtwSpawn > minTime)
             {
                 startTimeBtwSpawn -= decreaseTime;
