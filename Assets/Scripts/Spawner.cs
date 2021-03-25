@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         if (timeBtwSpawn <= 0)
         {
             //random time for spawn
-            int rand = Random.Range(0, obstaclePatterns.Length); // 
+            int rand = Random.Range(0, obstaclePatterns.Length); // random element from array
             Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
 
