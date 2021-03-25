@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public float waterlevel;
    public int health = 3;
     public float Oxygen = 100;
-    // if we decide to use health
+
 
 
 
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         {
             if (transform.position.y > waterlevel)
             {
-                Oxygen = 100;
+                Oxygen = 500;
             }
             else if (transform.position.y < waterlevel)
             {
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
         }
         // text display for oxygen and health
-        OxygenDisplay.GetComponent<Text>().text = "Oxygen:" + Oxygen + "/100";
+        OxygenDisplay.GetComponent<Text>().text = "Oxygen:" + Oxygen + "/500";
         HealthDisplay.GetComponent<Text>().text = "Health:" + health + "/3";
 
     }

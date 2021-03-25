@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
     public float speed;
     public int damage = 1;
     private Vector2 screenBounds;
-
+    public float endX;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,6 +34,11 @@ public class Obstacle : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         //destroys gameobject once it moves off screen
+        if (transform.position.x <= endX)
+        {
+            Destroy(this.gameObject);
+        }
+
         //if (transform.position.x > screenBounds.x * 2)
         //{
         //    Destroy(this.gameObject);
