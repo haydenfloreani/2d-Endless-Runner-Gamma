@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24103161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24103163}
+  - component: {fileID: 24103162}
+  m_Layer: 0
+  m_Name: Spawn Point Above Water 02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &24103162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24103161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0fb5ef14c597a46806ef8ff8c993c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 7247559109598886755, guid: 4fb9205be63debc4098504b83459b60d, type: 3}
+--- !u!4 &24103163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24103161}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.72, y: 1.81, z: -0.67544365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310048343
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +575,7 @@ GameObject:
   - component: {fileID: 679559962}
   - component: {fileID: 679559961}
   m_Layer: 0
-  m_Name: Spawn Point Water1
+  m_Name: Spawn Point Water 02
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -558,11 +602,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679559960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.72, y: -1.99, z: -0.67544365}
+  m_LocalPosition: {x: 5.72, y: -0.4936891, z: -0.67544365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732778518
 GameObject:
@@ -575,7 +619,7 @@ GameObject:
   - component: {fileID: 732778520}
   - component: {fileID: 732778519}
   m_Layer: 0
-  m_Name: Spawn Point Water 2
+  m_Name: Spawn Point Water 03
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -602,11 +646,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732778518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.71, y: -0.94, z: -0.67544365}
+  m_LocalPosition: {x: 5.71, y: -1.7436888, z: -0.67544365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907997590
 GameObject:
@@ -813,11 +857,16 @@ MonoBehaviour:
   obstaclePatterns:
   - {fileID: 3615068118071822920, guid: 07d409d23d7b4e642a34cfeaf96d9c27, type: 3}
   - {fileID: 688311684605474505, guid: b453e98f49f5d4b419278d007a4fd40e, type: 3}
-  - {fileID: 8219308056366949560, guid: 8cd835379977f0a4a8eb9b44bbd467d5, type: 3}
   - {fileID: 4800294887444236625, guid: 61430c6466edafc478a72eef5e9b14d8, type: 3}
-  - {fileID: 8242368076351260790, guid: a637205f878231b458df059c33ea2f5d, type: 3}
-  startTimeBtwSpawn: 3
-  decreaseTime: 0.1
+  - {fileID: 7516057472384282221, guid: 7f1dbb3da78ef0d4f8b8271fdc9a6cbc, type: 3}
+  - {fileID: 8492165268607918762, guid: 5e4f8e6192738b546ae15dec549b51a6, type: 3}
+  - {fileID: 4344999467805358186, guid: 7614d89bec4aca5469358041acce9407, type: 3}
+  - {fileID: 5312655324250231945, guid: a4b420b87f15e64459c72c531062d040, type: 3}
+  - {fileID: 2170401631487318003, guid: 691434967a6e4ef4ba15d39a3b129269, type: 3}
+  - {fileID: 5309816887656201294, guid: 6ce8047088b33ff4fa8f93206eda89bf, type: 3}
+  - {fileID: 230004069925203300, guid: 6054978f116613247a73c84b4945067f, type: 3}
+  startTimeBtwSpawn: 4
+  decreaseTime: 0.2
   minTime: 0.75
 --- !u!4 &1062750393
 Transform:
@@ -827,7 +876,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062750391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.13, y: -0.66, z: -0.67544365}
+  m_LocalPosition: {x: 7.41, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1229,7 +1278,7 @@ GameObject:
   - component: {fileID: 1651419974}
   - component: {fileID: 1651419973}
   m_Layer: 0
-  m_Name: Seagull SpawnPoint
+  m_Name: Spawn Point Water 01
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1256,11 +1305,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651419972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.71, y: 1.88, z: -0.67544365}
+  m_LocalPosition: {x: 5.71, y: 0.78, z: -0.67544365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673700939
 GameObject:
@@ -1364,36 +1413,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1758254941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1758254942}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1758254942
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758254941}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8991456, y: -0.11533649, z: -2.9633021}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763550966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,11 +2085,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991012317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.04, y: 1.94, z: -0.67544365}
+  m_LocalPosition: {x: 5.72, y: 2, z: -0.67544365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087520131
 GameObject:
@@ -2114,7 +2133,7 @@ MonoBehaviour:
   back: -6.01
   front: 10.01
   fallincrement: 0.005
-  oxygenLose: 0.01
+  oxygenLose: 0.005
   maxHeight: 2.26
   minHeight: -1.7
   waterlevel: 0.76
